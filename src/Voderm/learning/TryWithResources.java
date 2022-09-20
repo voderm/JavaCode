@@ -8,9 +8,9 @@ class Door implements AutoCloseable{
     public Door(){
         System.out.println("The door is created.");
     }
-    public void open() throws Exception{
+    public void open() throws Exception{ //声明处的异常必须要有，方法内部可能隐式或显式的抛出异常
         System.out.println("The door is opened.");
-        throw new Exception();
+        throw new Exception();   //方法体内部抛出了异常，那声明处必须指明抛出的异常
     }
     @Override
     public void close(){
